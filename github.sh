@@ -42,8 +42,6 @@ chmod 600 "$SSH_DIR/id_ed25519" && { echo "${OK} Changed permissions successfull
 }
 
 # Disable StrictHostKeyChecking
-echo "    StrictHostKeyChecking=no" > "$SSH_DIR"/config && {
-    echo "${OK} Disabled StrictHostKeyChecking!"; 
-} || {
+echo "StrictHostKeyChecking=no" > "$SSH_DIR"/config && { echo "${OK} Disabled StrictHostKeyChecking!"; } || {
     echo "${ERROR} Failed to disable StrictHostKeyChecking"
 }
