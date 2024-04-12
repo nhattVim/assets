@@ -40,3 +40,10 @@ echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICxbzMIMKKyS0iCZhWt3p1428QvLlo2VI1+HqV
 chmod 600 "$SSH_DIR/id_ed25519" && { echo "${OK} Changed permissions successfully!"; } || {
     echo "${ERROR} Failed to change permissions"
 }
+
+# Disable StrictHostKeyChecking
+echo "    StrictHostKeyChecking=no" > "$SSH_DIR"/config && {
+    echo "${OK} Disabled StrictHostKeyChecking!"; 
+} || {
+    echo "${ERROR} Failed to disable StrictHostKeyChecking"
+}
