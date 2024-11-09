@@ -1,0 +1,186 @@
+{
+    // Generall settings
+    "window.menuBarVisibility": "toggle",
+    "breadcrumbs.enabled": false,
+    "files.autoSave": "afterDelay",
+    "chat.commandCenter.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "explorer.confirmDelete": false,
+    "explorer.compactFolders": false,
+    "editor.fontFamily": "MesloLGS NF, Consolas, 'Courier New', monospace",
+    "editor.matchBrackets": "near",
+    "editor.wordWrap": "on",
+    "editor.lineHeight": 30,
+    "editor.letterSpacing": 0.5,
+    "editor.tabSize": 4,
+    "editor.lineNumbers": "relative",
+    "editor.stickyScroll.enabled": false,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.formatOnSave": true,
+    "editor.renderLineHighlight": "gutter",
+    "editor.guides.indentation": false,
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Evondev Dracula Darker Contrast",
+    "workbench.iconTheme": "eq-material-theme-icons-palenight",
+    "workbench.tree.renderIndentGuides": "none",
+    "workbench.layoutControl.enabled": false,
+    "workbench.colorCustomizations": {
+        "editorBracketHighlight.foreground1": "#FFE19E",
+        "editorBracketHighlight.foreground2": "#FF8A94",
+        "editorBracketHighlight.foreground3": "#8AD5FF",
+        "editorBracketHighlight.foreground4": "#FFC28B",
+        "editorBracketHighlight.foreground5": "#B9F2A6",
+        "editorBracketHighlight.foreground6": "#EFA6FF",
+        "editorSuggestWidget.background": "#0c0d18",
+        "editorSuggestWidget.foreground": "#abb2bf",
+        "editorSuggestWidget.border": "#0c0d18",
+        "widget.border": "#2cccff",
+        "widget.shadow": "#2cccff",
+        "focusBorder": "#2cccff",
+        "terminalCursor.foreground": "#2dd0dcee",
+        "statusBar.background": "#8FBCBB",
+        "statusBar.noFolderBackground": "#8FBCBB",
+        "statusBar.debuggingBackground": "#8FBCBB",
+        "statusBar.foreground": "#434C5E",
+        "statusBar.debuggingForeground": "#434C5E"
+    },
+    // Formatters setting
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    // Extensions settings
+    "prettier.tabWidth": 4,
+    "tabnine.experimentalAutoImports": true,
+    "vscode_custom_css.imports": ["file:///C:/Users/nhatt/UserData/custom.css"],
+    "indentRainbow.indicatorStyle": "light",
+    "indentRainbow.lightIndicatorStyleLineWidth": 1,
+    "indentRainbow.colors": [
+        "#FFE19E",
+        "#FF8A94",
+        "#8AD5FF",
+        "#FFC28B",
+        "#B9F2A6",
+        "#EFA6FF"
+    ],
+    // Vim setup
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["Esc"]
+        },
+        {
+            "before": ["C-h"],
+            "after": ["left"]
+        },
+        {
+            "before": ["C-j"],
+            "after": ["down"]
+        },
+        {
+            "before": ["C-k"],
+            "after": ["up"]
+        },
+        {
+            "before": ["C-l"],
+            "after": ["right"]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        // Open command Palette
+        {
+            "before": ["<leader>", "c"],
+            "commands": ["workbench.action.showCommands"]
+        },
+        // Utils
+        {
+            "before": ["<leader>", "x"],
+            "commands": [":x"]
+        },
+        {
+            "before": ["<leader>", "w"],
+            "commands": ["workbench.action.files.save"]
+        },
+        {
+            "before": ["<leader>", "n"],
+            "commands": [":nohl"]
+        },
+        // Bookmark
+        {
+            "before": ["<leader>", "m", "m"],
+            "commands": ["bookmarks.toggle"]
+        },
+        {
+            "before": ["<leader>", "m", "l"],
+            "commands": ["bookmarks.list"]
+        },
+        {
+            "before": ["<leader>", "m", "j"],
+            "commands": ["bookmarks.jumpToNext"]
+        },
+        {
+            "before": ["<leader>", "m", "k"],
+            "commands": ["bookmarks.jumpToPrevious"]
+        },
+        // Navigation
+        {
+            "before": ["Tab"],
+            "commands": [":bnext"]
+        },
+        {
+            "before": ["S-Tab"],
+            "commands": [":bprevious"]
+        },
+        // Split windows
+        {
+            "before": ["<leader>", "s", "v"],
+            "commands": [":vsplit"]
+        },
+        {
+            "before": ["<leader>", "s", "h"],
+            "commands": [":split"]
+        },
+        // Duplicate lines
+        {
+            "before": ["<S-j>"],
+            "commands": ["editor.action.copyLinesDownAction"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [">"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<"],
+            "commands": ["editor.action.outdentLines"]
+        },
+        {
+            "before": ["<S-j>"],
+            "commands": ["editor.action.copyLinesDownAction"]
+        },
+        {
+            "before": ["<leader>", "<leader>"],
+            "after": ["<ESC>"]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-v>": false
+    },
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    }
+}
