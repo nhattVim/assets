@@ -1,0 +1,279 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "f1",
+        "command": "workbench.action.toggleActivityBarVisibility"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "f8",
+        "command": "-editor.action.marker.nextInFiles",
+        "when": "editorFocus"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "f1",
+        "command": "-workbench.action.showCommands"
+    },
+    /////////////////////////////////////////////////////////////
+    {
+        "key": "f3",
+        "command": "workbench.action.toggleMenuBar"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "f8",
+        "command": "code-runner.run"
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "-code-runner.run"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "f2",
+        "command": "workbench.action.toggleStatusbarVisibility"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "f9",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "f10",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+oem_3",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "f4",
+        "command": "editor.action.toggleMinimap"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "ctrl+shift+p",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "ctrl+shift+p",
+        "command": "-workbench.action.showCommands"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "f5",
+        "command": "breadcrumbs.toggle"
+    },
+    {
+        "key": "ctrl+k l",
+        "command": "livePreview.start.preview.atFile"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "ctrl+shift+k",
+        "command": "editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "-editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "ctrl+pageup",
+        "command": "-workbench.action.previousEditor"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "-workbench.action.nextEditor"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "tab",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "down",
+        "command": "-selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "shift+tab",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "up",
+        "command": "-selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "f8",
+        "command": "mssql.runQuery",
+        "when": "editorTextFocus && editorLangId == 'sql'"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "-mssql.runQuery",
+        "when": "editorTextFocus && editorLangId == 'sql'"
+    },
+    /////////////////////////////////////////////////////////////////////////////////////// 
+    /////////////////////////                          ////////////////////////////////////
+    ////////////////////////      FILE EXPLORER       /////////////////////////////////////
+    ///////////////////////                          //////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////// 
+    {
+        "key": "d",
+        "command": "moveFileToTrash",
+        "when": "explorerResourceMoveableToTrash && explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "delete",
+        "command": "-moveFileToTrash",
+        "when": "explorerResourceMoveableToTrash && explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "r",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "f2",
+        "command": "-renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "shift+a",
+        "command": "workbench.files.action.createFolderFromExplorer",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "workbench.view.explorer",
+        "when": "viewContainer.workbench.view.explorer.enabled"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "p",
+        "command": "filesExplorer.paste",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "-filesExplorer.paste",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "y",
+        "command": "filesExplorer.copy",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-filesExplorer.copy",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "x",
+        "command": "filesExplorer.cut",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "ctrl+x",
+        "command": "-filesExplorer.cut",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "a",
+        "command": "workbench.files.action.createFileFromExplorer",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "k",
+        "command": "list.focusUp",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "up",
+        "command": "-list.focusUp",
+        "when": "listFocus && !inputFocus"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "j",
+        "command": "list.focusDown",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "down",
+        "command": "-list.focusDown",
+        "when": "listFocus && !inputFocus"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "g g",
+        "command": "list.focusFirst",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "home",
+        "command": "-list.focusFirst",
+        "when": "listFocus && !inputFocus"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "shift+g",
+        "command": "list.focusLast",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "end",
+        "command": "-list.focusLast",
+        "when": "listFocus && !inputFocus"
+    },
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    {
+        "key": "ctrl+alt+g",
+        "command": "workbench.view.extension.chatgpt-vscode-view-container"
+    },
+    {
+        "key": "ctrl+alt+e",
+        "command": "workbench.view.extension.objectExplorer"
+    },
+    {
+        "key": "ctrl+alt+d",
+        "command": "-workbench.view.extension.objectExplorer"
+    },
+    ///////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////
+]
