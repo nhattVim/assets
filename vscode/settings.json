@@ -50,6 +50,7 @@
     "explorer.compactFolders": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
+    "files.enableTrash": true,
     "files.trimTrailingWhitespace": true,
     "files.autoSave": "afterDelay",
     "telemetry.telemetryLevel": "off",
@@ -61,7 +62,7 @@
     "window.titleBarStyle": "custom",
     "window.menuBarVisibility": "toggle",
     "workbench.activityBar.location": "hidden",
-    "workbench.editor.showTabs": "single",
+    "workbench.editor.showTabs": "multiple",
     "workbench.statusBar.visible": false,
     "workbench.startupEditor": "none",
     "workbench.tips.enabled": false,
@@ -175,7 +176,7 @@
     "vim.normalModeKeyBindings": [
         // Utils
         {
-            "before": ["<leader>", "n"],
+            "before": ["space", "n"],
             "commands": [":nohl"]
         },
         // Bookmark
@@ -198,23 +199,11 @@
     ],
     "vim.visualModeKeyBindings": [
         {
-            "before": ["tab"],
-            "commands": ["editor.action.indentLines"]
-        },
-        {
-            "before": ["<S-tab>"],
-            "commands": ["editor.action.outdentLines"]
-        },
-        {
-            "before": ["<S-j>"],
-            "commands": ["editor.action.copyLinesDownAction"]
-        },
-        {
-            "before": ["<leader>", "<leader>"],
+            "before": ["space", "space"],
             "after": ["<ESC>"]
         }
     ],
-    "vim.leader": "<space>",
+    "vim.leader": "\\",
     "vim.handleKeys": {
         "<C-a>": false,
         "<C-v>": false

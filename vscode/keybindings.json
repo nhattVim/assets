@@ -17,46 +17,51 @@
         "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
     },
     {
-        "key": "ctrl-j",
+        "key": "shift+j",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "(vim.mode == 'VisualLine' || vim.mode == 'Normal') && editorTextFocus"
+    },
+    {
+        "key": "ctrl+j",
         "command": "workbench.action.quickOpenSelectNext",
         "when": "inQuickOpen"
     },
     {
-        "key": "ctrl-k",
+        "key": "ctrl+k",
         "command": "workbench.action.quickOpenSelectPrevious",
         "when": "inQuickOpen"
     },
 
     // Navigation
     {
-        "key": "ctrl-h",
+        "key": "ctrl+h",
         "command": "workbench.action.navigateLeft",
-        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+        "when": "vim.mode == 'Normal' && !inQuickOpen"
     },
     {
-        "key": "ctrl-j",
+        "key": "ctrl+j",
         "command": "workbench.action.navigateDown",
-        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+        "when": "vim.mode == 'Normal' && !inQuickOpen"
     },
     {
-        "key": "ctrl-k",
+        "key": "ctrl+k",
         "command": "workbench.action.navigateUp",
-        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+        "when": "vim.mode == 'Normal' && !inQuickOpen"
     },
     {
-        "key": "ctrl-l",
+        "key": "ctrl+l",
         "command": "workbench.action.navigateRight",
-        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+        "when": "vim.mode == 'Normal' && !inQuickOpen"
     },
     {
         "key": "tab",
         "command": "workbench.action.nextEditorInGroup",
-        "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus"
+        "when": "vim.mode == 'Normal' && editorTextFocus"
     },
     {
-        "key": "shift-tab",
+        "key": "shift+tab",
         "command": "workbench.action.previousEditorInGroup",
-        "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus"
+        "when": "vim.mode == 'Normal' && editorTextFocus"
     },
     {
         "key": "tab",
@@ -64,24 +69,44 @@
         "when": "vim.mode == 'Insert' && suggestWidgetVisible && editorTextFocus"
     },
     {
-        "key": "shift-tab",
+        "key": "shift+tab",
         "command": "selectPrevSuggestion",
         "when": "vim.mode == 'Insert' && suggestWidgetVisible && editorTextFocus"
     },
     {
-        "key": "ctrl-tab",
+        "key": "tab",
+        "command": "editor.action.indentLines",
+        "when": "vim.mode == 'VisualLine' && editorTextFocus"
+    },
+    {
+        "key": "shift+tab",
+        "command": "editor.action.outdentLines",
+        "when": "vim.mode == 'VisualLine' && editorTextFocus"
+    },
+    {
+        "key": "ctrl+tab",
         "command": "workbench.action.nextEditor"
     },
     {
-        "key": "ctrl-shift-tab",
+        "key": "ctrl+shift+tab",
         "command": "workbench.action.previousEditor"
     },
 
     // Editors actions
     {
-        "key": "ctrl-n",
+        "key": "ctrl+n",
         "command": "editor.action.addSelectionToNextFindMatch",
         "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "alt+f",
+        "command": "editor.action.inlineSuggest.commit",
+        "when": "vim.mode == 'Insert' && inlineSuggestionVisible && tabnine.tab-override && !editorTabMovesFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "hideSuggestWidget",
+        "when": "suggestWidgetVisible"
     },
     {
         "key": "space ,",
@@ -123,11 +148,6 @@
         "command": "code-runner.run",
         "when": "vim.mode == 'Normal' && editorTextFocus"
     },
-    {
-        "key": "shift-j",
-        "command": "editor.action.copyLinesDownAction",
-        "when": "vim.mode == 'Normal' && editorTextFocus"
-    },
 
     // Split editors
     {
@@ -143,7 +163,7 @@
 
     // Coding
     {
-        "key": "shift-k",
+        "key": "shift+k",
         "command": "editor.action.showHover",
         "when": "vim.mode == 'Normal' && editorTextFocus"
     },
@@ -194,6 +214,11 @@
         "command": "workbench.view.explorer",
         "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
     },
+    {
+        "key": "space v x",
+        "command": "workbench.view.extensions",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
 
     // File explorer
     {
@@ -227,7 +252,7 @@
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
     {
-        "key": "shift-a",
+        "key": "shift+a",
         "command": "explorer.newFolder",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
@@ -237,7 +262,7 @@
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
     {
-        "key": "shift-s",
+        "key": "shift+s",
         "command": "runCommands",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
         "args": {
@@ -284,5 +309,22 @@
         "key": "space d c",
         "command": "workbench.action.debug.continue",
         "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && inDebugMode && debugState == 'stopped'"
+    },
+
+    // Remove some default keybindings
+    {
+        "key": "tab",
+        "command": "-editor.action.inlineSuggest.commit",
+        "when": "inlineSuggestionVisible && tabnine.tab-override && !editorTabMovesFocus"
+    },
+    {
+        "key": "tab",
+        "command": "-editor.action.inlineSuggest.commit",
+        "when": "inlineEditIsVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
+    },
+    {
+        "key": "alt+f",
+        "command": "-tabnine.chat.commands.refine",
+        "when": "editorTextFocus"
     }
 ]
