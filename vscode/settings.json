@@ -146,7 +146,7 @@
     "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": false,
+    "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
     "vim.insertModeKeyBindings": [
         {
@@ -206,15 +206,6 @@
             "before": ["<leader>", "m", "k"],
             "commands": ["bookmarks.jumpToPrevious"]
         },
-        // Navigation
-        {
-            "before": ["Tab"],
-            "commands": [":bnext"]
-        },
-        {
-            "before": ["S-Tab"],
-            "commands": [":bprevious"]
-        },
         // Split windows
         {
             "before": ["<leader>", "s", "v"],
@@ -228,15 +219,31 @@
         {
             "before": ["<S-j>"],
             "commands": ["editor.action.copyLinesDownAction"]
+        },
+        {
+            "before": ["<leader>", "e"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        {
+            "before": ["<leader>", "c", "a"],
+            "commands": ["editor.action.codeAction"]
+        },
+        {
+            "before": ["<leader>", "c", "r"],
+            "commands": ["editor.action.rename"]
+        },
+        {
+            "before": ["<leader>", "c", "s"],
+            "commands": ["workbench.action.gotoSymbol"]
         }
     ],
     "vim.visualModeKeyBindings": [
         {
-            "before": [">"],
+            "before": ["tab"],
             "commands": ["editor.action.indentLines"]
         },
         {
-            "before": ["<"],
+            "before": ["<S-tab>"],
             "commands": ["editor.action.outdentLines"]
         },
         {
