@@ -30,8 +30,10 @@
     "editor.renderLineHighlight": "gutter",
     "editor.occurrencesHighlight": "off",
     "editor.selectionHighlight": false,
-    "editor.scrollbar.horizontal": "hidden",
-    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontal": "auto",
+    "editor.scrollbar.vertical": "auto",
+    "editor.scrollbar.horizontalScrollbarSize": 8,
+    "editor.scrollbar.verticalScrollbarSize": 8,
     "editor.overviewRulerBorder": false,
     "editor.hideCursorInOverviewRuler": true,
     "editor.matchBrackets": "near",
@@ -108,7 +110,7 @@
         ".title.show-file-icons .label-container .monaco-icon-label.file-icon": "justify-content: center; padding: 0 !important",
         ".sidebar .title-label": "padding: 0 !important",
         ".monaco-editor .cursors-layer .cursor": "background-image: linear-gradient(135deg, #ffaffc 10%, #DA70D6 100%)",
-        ".monaco-scrollable-element > .scrollbar > .slider": "border-radius: 6px"
+        ".monaco-scrollable-element > .scrollbar > .slider": "border-radius: 6px; max-height: 100px"
     },
 
     // Formatters setting
@@ -171,70 +173,27 @@
         }
     ],
     "vim.normalModeKeyBindings": [
-        // Open command Palette
-        {
-            "before": ["<leader>", "c"],
-            "commands": ["workbench.action.showCommands"]
-        },
         // Utils
-        {
-            "before": ["<leader>", "x"],
-            "commands": [":x"]
-        },
-        {
-            "before": ["<leader>", "w"],
-            "commands": ["workbench.action.files.save"]
-        },
         {
             "before": ["<leader>", "n"],
             "commands": [":nohl"]
         },
         // Bookmark
         {
-            "before": ["<leader>", "m", "m"],
+            "before": ["m", "m"],
             "commands": ["bookmarks.toggle"]
         },
         {
-            "before": ["<leader>", "m", "l"],
+            "before": ["m", "l"],
             "commands": ["bookmarks.list"]
         },
         {
-            "before": ["<leader>", "m", "j"],
+            "before": ["m", "j"],
             "commands": ["bookmarks.jumpToNext"]
         },
         {
-            "before": ["<leader>", "m", "k"],
+            "before": ["m", "k"],
             "commands": ["bookmarks.jumpToPrevious"]
-        },
-        // Split windows
-        {
-            "before": ["<leader>", "s", "v"],
-            "commands": [":vsplit"]
-        },
-        {
-            "before": ["<leader>", "s", "h"],
-            "commands": [":split"]
-        },
-        // Duplicate lines
-        {
-            "before": ["<S-j>"],
-            "commands": ["editor.action.copyLinesDownAction"]
-        },
-        {
-            "before": ["<leader>", "e"],
-            "commands": ["workbench.action.toggleSidebarVisibility"]
-        },
-        {
-            "before": ["<leader>", "c", "a"],
-            "commands": ["editor.action.codeAction"]
-        },
-        {
-            "before": ["<leader>", "c", "r"],
-            "commands": ["editor.action.rename"]
-        },
-        {
-            "before": ["<leader>", "c", "s"],
-            "commands": ["workbench.action.gotoSymbol"]
         }
     ],
     "vim.visualModeKeyBindings": [
@@ -263,5 +222,6 @@
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
     },
-    "liveServer.settings.donotVerifyTags": true
+    "liveServer.settings.donotVerifyTags": true,
+    "code-runner.runInTerminal": true
 }
